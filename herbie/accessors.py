@@ -400,12 +400,12 @@ class HerbieAccessor:
             if max_distance:
                 flagged = a.loc[a.point_grid_distance > max_distance]
                 a = a.loc[a.point_grid_distance <= max_distance]
-                if len(flagged):
-                    print(
-                        f"WARNING: {len(flagged)} points removed for exceeding {max_distance=} km threshold."
-                    )
-                    print(f"{flagged}")
-                    print("")
+                # if len(flagged):
+                #     print(
+                #         f"WARNING: {len(flagged)} points removed for exceeding {max_distance=} km threshold."
+                #     )
+                #     print(f"{flagged}")
+                #     print("")
 
             # Get corresponding values from xarray
             # https://docs.xarray.dev/en/stable/user-guide/indexing.html#more-advanced-indexing

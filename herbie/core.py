@@ -1180,10 +1180,11 @@ class Herbie:
                 data_vars.remove("gribfile_projection")
                 Hxr = xr.concat(Hxr, dim="step", data_vars=data_vars)
             except Exception:
-                if self.verbose:
-                    print(
-                        f"Note: Returning a list of [{len(Hxr)}] xarray.Datasets because cfgrib opened with multiple hypercubes."
-                    )
+                pass
+                # if self.verbose:
+                #     print(
+                #         f"Note: Returning a list of [{len(Hxr)}] xarray.Datasets because cfgrib opened with multiple hypercubes."
+                #     )
             return Hxr
 
     def terrain(self, water_masked=True):
